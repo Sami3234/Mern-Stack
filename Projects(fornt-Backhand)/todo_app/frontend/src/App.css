@@ -1,0 +1,25 @@
+.todo-item span {
+  flex: 1;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.todo-item span:hover {
+  background-color: #f0f0f0;
+  border-radius: 4px;
+}
+
+.todo-item input[type="text"] {
+  flex: 1;
+  padding: 4px;
+  border: 1px solid #2196F3;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-right: 8px;
+}
+
+.todo-item input[type="text"]:focus {
+  outline: none;
+  border-color: #1976D2;
+  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.2);
+} 
