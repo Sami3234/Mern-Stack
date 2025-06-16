@@ -18,20 +18,34 @@ function shuffleArray(array) {
 
 // Generate new game state
 app.post('/api/new-game', (req, res) => {
-    const numbers = [1, 2, 3, 4, 5];
+    const { level } = req.body;
+    console.log('Starting new game for level:', level);
+    
+    let numbers;
+    if (level === 1) {
+        numbers = [1, 2, 3, 4, 5];
+    } else if (level === 2) {
+        numbers = [1, 2, 3, 4, 5, 6];
+    }
+    
     const shuffledNumbers = shuffleArray([...numbers]);
-    res.json({ boxes: shuffledNumbers });
+    console.log('Generated boxes for level', level, ':', shuffledNumbers);
+    console.log('Number of boxes:', shuffledNumbers.length);
+    
+    res.json({
+        boxes: shuffledNumbers,
+        level: level,
+        maxNumber: level === 1 ? 5 : 6
+    });
 });
 
 // Check guess
 app.post('/api/check-guess', (req, res) => {
-    const { boxIndex, guessNumber } = req.body;
-    const { boxes } = req.body.gameState;
-    
-    const isCorrect = boxes[boxIndex] === guessNumber;
+    const { boxIndex, guessNumber, gameState } = req.body;
+    const isCorrect = gameState.boxes[boxIndex] === guessNumber;
     res.json({ isCorrect });
 });
 
 app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
+    console.log(`Server running at http://localhost:${port}`);
 }); 
