@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Prize Claims</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: white;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #FFD700;
+            margin-bottom: 30px;
+        }
+        .stats {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .claim-card {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+        .claim-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+        }
+        .user-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        .info-item {
+            background: rgba(255, 215, 0, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 3px solid #FFD700;
+        }
+        .info-label {
+            font-weight: bold;
+            color: #FFD700;
+            font-size: 0.9em;
+        }
+        .info-value {
+            font-size: 1.1em;
+            margin-top: 5px;
+        }
+        .date {
+            color: #ccc;
+            font-size: 0.9em;
+        }
+        .no-claims {
+            text-align: center;
+            padding: 50px;
+            color: #ccc;
+        }
+        .refresh-btn {
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            color: #1a1a2e;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .refresh-btn:hover {
+            background: linear-gradient(45deg, #FFA500, #FFD700);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 Prize Claims Dashboard</h1>
+        
+        <button class="refresh-btn" onclick="loadPrizeClaims()">🔄 Refresh Data</button>
+        
+        <div class="stats" id="stats">
+            <h2>Loading...</h2>
+        </div>
+        
+        <div id="claims-container">
+            <div class="no-claims">Loading prize claims...</div>
+        </div>
+    </div>
+
+    <script>
+        async function loadPrizeClaims() {
+            try {
+                const response = await fetch('http://localhost:5000/api/admin/prize-claims');
+                const data = await response.json();
+                
+                if (data.success) {
+                    displayStats(data);
+                    displayClaims(data.claims);
+                } else {
+                    document.getElementById('claims-container').innerHTML = 
+                        '<div class="no-claims">Error loading data</div>';
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('claims-container').innerHTML = 
+                    '<div class="no-claims">Error connecting to server</div>';
+            }
+        }
+
+        function displayStats(data) {
+            const statsDiv = document.getElementById('stats');
+            statsDiv.innerHTML = `
+                <h2>📊 Total Prize Claims: ${data.totalClaims}</h2>
+                <p>Total Prize Amount: Rs. ${data.totalClaims * 200}</p>
+            `;
+        }
+
+        function displayClaims(claims) {
+            const container = document.getElementById('claims-container');
+            
+            if (claims.length === 0) {
+                container.innerHTML = '<div class="no-claims">No prize claims yet</div>';
+                return;
+            }
+
+            container.innerHTML = claims.map(claim => `
+                <div class="claim-card">
+                    <div class="user-info">
+                        <div class="info-item">
+                            <div class="info-label">Username</div>
+                            <div class="info-value">${claim.username}</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">JazzCash Number</div>
+                            <div class="info-value">${claim.jazzCashNumber}</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Account Name</div>
+                            <div class="info-value">${claim.accountName}</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Transaction ID</div>
+                            <div class="info-value">${claim.transactionId}</div>
+                        </div>
+                    </div>
+                    <div class="date">
+                        Claimed on: ${new Date(claim.prizeClaimedAt).toLocaleString()}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Load data when page loads
+        loadPrizeClaims();
+        
+        // Auto refresh every 30 seconds
+        setInterval(loadPrizeClaims, 30000);
+    </script>
+</body>
+</html> 
