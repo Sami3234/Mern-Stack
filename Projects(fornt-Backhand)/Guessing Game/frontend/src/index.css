@@ -1,56 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer base {
-  body {
-    @apply antialiased bg-gradient-to-br from-primary-900 via-secondary-900 to-accent-900 min-h-screen;
-  }
-}
-
-@layer components {
-  .btn-primary {
-    @apply w-full bg-gradient-to-r from-primary-500 to-secondary-500 text-white py-4 rounded-xl font-bold text-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 active:scale-95;
-  }
-
-  .btn-secondary {
-    @apply w-full bg-gradient-to-r from-secondary-500 to-accent-500 text-white py-4 rounded-xl font-bold text-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 active:scale-95;
-  }
-
-  .input-field {
-    @apply w-full px-6 py-4 rounded-xl border-2 border-gray-300 focus:border-primary-500 focus:outline-none transition-colors text-lg bg-white text-gray-900 shadow-inner;
-  }
-
-  .card {
-    @apply bg-white/95 backdrop-blur-lg rounded-2xl shadow-2xl p-8 border-2 border-white/20;
-  }
-
-  .text-label {
-    @apply text-gray-900 font-bold text-lg mb-2;
-  }
-
-  .text-description {
-    @apply text-gray-700 text-sm mb-4;
-  }
-}
-
-/* Mobile-specific styles */
-@media (max-width: 640px) {
-  .btn-primary, .btn-secondary {
-    @apply py-3 text-lg;
-  }
-
-  .input-field {
-    @apply px-4 py-3 text-base;
-  }
-
-  .card {
-    @apply p-4;
-  }
-}
-
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -75,6 +24,8 @@ a:hover {
 
 body {
   margin: 0;
+  display: flex;
+  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }

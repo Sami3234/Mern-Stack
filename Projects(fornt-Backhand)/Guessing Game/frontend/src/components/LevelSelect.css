@@ -1,0 +1,285 @@
+.level-select-container {
+  max-width: 1200px;
+  margin: 5rem auto 2rem;
+  padding: 2rem;
+  text-align: center;
+  background: rgba(232, 234, 237, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(232, 234, 237, 0.15);
+}
+
+.level-select-container h1 {
+  color: #4a9eff;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+}
+
+.levels-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.level-card {
+  background: rgba(232, 234, 237, 0.08);
+  border-radius: 15px;
+  padding: 2rem;
+  width: 280px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(232, 234, 237, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.level-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(232, 234, 237, 0.08), transparent);
+  transition: left 0.5s;
+}
+
+.level-card:hover::before {
+  left: 100%;
+}
+
+.level-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  background: rgba(232, 234, 237, 0.12);
+  border-color: rgba(232, 234, 237, 0.25);
+}
+
+.level-card.locked-level {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: rgba(232, 234, 237, 0.04);
+}
+
+.level-card.locked-level:hover {
+  transform: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.level-card.locked-level::after {
+  content: '🔒';
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  opacity: 0.7;
+}
+
+.level-card.congratulations-level {
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 165, 0, 0.2));
+  border: 2px solid rgba(255, 215, 0, 0.5);
+  animation: congratulationsGlow 2s ease-in-out infinite alternate;
+}
+
+.level-card.congratulations-level:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.3), rgba(255, 165, 0, 0.3));
+}
+
+.level-card.congratulations-level h2 {
+  color: #FFD700;
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+  animation: congratulationsText 1.5s ease-in-out infinite alternate;
+}
+
+.level-card.congratulations-level .level-btn {
+  background: linear-gradient(45deg, #FFD700, #FFA500);
+  color: #1a1a2e;
+  font-weight: bold;
+  animation: buttonPulse 1s ease-in-out infinite alternate;
+}
+
+.level-card.congratulations-level .level-btn:hover:not(:disabled) {
+  background: linear-gradient(45deg, #FFA500, #FFD700);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.5);
+}
+
+.level-card h2 {
+  color: #e8eaed;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(52, 168, 83, 0.4);
+}
+
+.level-details {
+  margin: 1.5rem 0;
+}
+
+.level-details p {
+  color: #e8eaed;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.level-btn {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  background: linear-gradient(45deg, #4a9eff, #34a853);
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+.level-btn:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(45deg, #34a853, #4a9eff);
+}
+
+.level-btn:disabled {
+  background: linear-gradient(45deg, #666, #999);
+  color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@keyframes congratulationsGlow {
+  0% {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
+  }
+}
+
+@keyframes congratulationsText {
+  0% {
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+  }
+  100% {
+    text-shadow: 0 0 25px rgba(255, 215, 0, 1);
+  }
+}
+
+@keyframes buttonPulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .levels-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .level-card {
+    width: 250px;
+    padding: 1.5rem;
+  }
+  
+  .level-select-container h1 {
+    font-size: 2rem;
+  }
+
+  /* Mobile-specific optimizations */
+  .level-select-container {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .level-card {
+    /* Touch-friendly sizing */
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .level-card:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease;
+  }
+
+  .level-btn {
+    /* Touch-friendly button */
+    min-height: 44px;
+    min-width: 120px;
+    font-size: 1.1rem;
+  }
+
+  .level-btn:active {
+    transform: scale(0.95);
+  }
+}
+
+/* Touch-friendly interactions for mobile */
+@media (hover: none) and (pointer: coarse) {
+  .level-card:hover {
+    transform: none;
+  }
+
+  .level-card:active {
+    transform: scale(0.98);
+  }
+
+  .level-btn:hover {
+    transform: none;
+  }
+
+  .level-btn:active {
+    transform: scale(0.95);
+  }
+}
+
+/* Landscape mode for mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .levels-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .level-card {
+    width: 200px;
+    padding: 1rem;
+  }
+
+  .level-select-container h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.level-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.level-header h2 {
+  color: #e8eaed;
+  margin: 0;
+  font-size: 1.8rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+} 

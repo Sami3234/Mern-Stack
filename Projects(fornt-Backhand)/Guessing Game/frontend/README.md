@@ -1,51 +1,12 @@
-# Number Guessing Game
+# React + Vite
 
-A modern web-based number guessing game built with React, Vite, and Tailwind CSS.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Features
+Currently, two official plugins are available:
 
-- User authentication (login/register)
-- Interactive number guessing game
-- Beautiful UI with animations
-- Mobile-responsive design
-- Modern gradient backgrounds
-- Smooth transitions and hover effects
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## How to Play
+## Expanding the ESLint configuration
 
-1. Create an account or login
-2. Find the numbers 1-5 in the correct order
-3. You have 3 attempts for each number
-4. If you fail to find a number within 3 attempts, the game is over
-5. Find all numbers to win!
-
-## Getting Started
-
-1. Install dependencies:
-```bash
-npm install
-```
-
-2. Start the development server:
-```bash
-npm run dev
-```
-
-3. Open your browser and navigate to `http://localhost:5173`
-
-## Technologies Used
-
-- React
-- Vite
-- Tailwind CSS
-- Framer Motion (for animations)
-- Heroicons
-
-## Development
-
-The project structure is organized as follows:
-
-- `src/components/Auth.jsx` - Authentication component
-- `src/components/Game.jsx` - Main game component
-- `src/App.jsx` - Main application component
-- `src/index.css` - Global styles and Tailwind imports
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
