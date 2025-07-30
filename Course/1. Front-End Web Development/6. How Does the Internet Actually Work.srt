@@ -1,0 +1,479 @@
+0
+1
+00:00:00,120 --> 00:00:03,480
+Hi guys, it's Angela from the App Brewery. And in this lesson,
+1
+
+2
+00:00:03,540 --> 00:00:08,400
+we're going to deep dive into how exactly does the internet actually work
+2
+
+3
+00:00:08,550 --> 00:00:12,780
+because here's this thing that we use every single day and we completely take it
+3
+
+4
+00:00:12,780 --> 00:00:13,613
+for granted.
+4
+
+5
+00:00:13,650 --> 00:00:18,240
+So before we start developing awesome websites and web apps for people to access
+5
+
+6
+00:00:18,240 --> 00:00:19,073
+through the internet,
+6
+
+7
+00:00:19,170 --> 00:00:23,040
+it's really important that we understand the fundamentals of how the internet
+7
+
+8
+00:00:23,220 --> 00:00:27,990
+actually works. So what exactly is the internet? Well,
+8
+
+9
+00:00:27,990 --> 00:00:30,360
+a lot of people think of it as a cloud,
+9
+
+10
+00:00:30,600 --> 00:00:33,870
+something that's hanging around in the sky, it's super complex,
+10
+
+11
+00:00:33,870 --> 00:00:37,530
+super difficult to understand, but actually that's not it at all.
+11
+
+12
+00:00:37,800 --> 00:00:39,390
+The internet is really simple.
+12
+
+13
+00:00:39,540 --> 00:00:44,540
+All it is is just a long piece of wire and the wire connects different computers
+13
+
+14
+00:00:45,600 --> 00:00:46,433
+to each other.
+14
+
+15
+00:00:46,710 --> 00:00:51,030
+So you might have one computer that's in Seattle and another computer that's in
+15
+
+16
+00:00:51,030 --> 00:00:51,750
+London,
+16
+
+17
+00:00:51,750 --> 00:00:56,550
+and they can talk to each other and transfer data through this giant wire. Now,
+17
+
+18
+00:00:56,580 --> 00:01:01,110
+some of these computers attached to the internet have a very special job.
+18
+
+19
+00:01:01,200 --> 00:01:03,570
+They have to be online 24/7
+19
+
+20
+00:01:03,900 --> 00:01:08,900
+ready to serve you all of the data and the files that you are requesting when
+20
+
+21
+00:01:09,060 --> 00:01:12,720
+you try to access websites and the computers that are doing that job,
+21
+
+22
+00:01:12,960 --> 00:01:17,550
+we would call a server and the computers that any user would you use to access
+22
+
+23
+00:01:17,550 --> 00:01:19,290
+the internet is called a client.
+23
+
+24
+00:01:19,380 --> 00:01:24,210
+Now you can imagine a web server as a giant library, that's open 24/7,
+24
+
+25
+00:01:24,390 --> 00:01:27,690
+and you can go in there at any hour of the day and request
+25
+
+26
+00:01:27,750 --> 00:01:29,550
+I want to see Google's homepage,
+26
+
+27
+00:01:29,610 --> 00:01:31,950
+or I want to see the latest post on Techcrunch.
+27
+
+28
+00:01:32,250 --> 00:01:36,120
+And it would be able to serve you with all of the files and data that you would
+28
+
+29
+00:01:36,120 --> 00:01:40,050
+need to be able to view whatever website it is that you requested.
+29
+
+30
+00:01:40,380 --> 00:01:44,670
+Now you can imagine if there's a library that's big enough to house all of these
+30
+
+31
+00:01:44,670 --> 00:01:45,420
+websites,
+31
+
+32
+00:01:45,420 --> 00:01:49,290
+then it's going to be pretty difficult to quickly locate the thing that you want
+32
+
+33
+00:01:49,590 --> 00:01:53,970
+out of this giant library, right? So how is this problem solved on the internet?
+33
+
+34
+00:01:54,270 --> 00:01:54,510
+Well,
+34
+
+35
+00:01:54,510 --> 00:01:59,460
+let's say that you're sitting at home on your computer and you type in google.com because
+35
+
+36
+00:01:59,460 --> 00:02:02,160
+you want to head over to the main Google homepage.
+36
+
+37
+00:02:02,670 --> 00:02:07,670
+What happens behind the scenes is that your browser will send a message to your
+37
+
+38
+00:02:07,770 --> 00:02:09,270
+internet service provider.
+38
+
+39
+00:02:09,480 --> 00:02:13,170
+So these are the people who you pay to be able to access the internet.
+39
+
+40
+00:02:13,500 --> 00:02:17,580
+And if you're in the US that's a company like AT&T or Comcast,
+40
+
+41
+00:02:17,820 --> 00:02:21,030
+and if you're in the UK, then that would be something like BT or Talk Talk.
+41
+
+42
+00:02:21,150 --> 00:02:26,150
+Now the message that you're sending the ISP is I want to see google.com and the
+42
+
+43
+00:02:26,640 --> 00:02:31,640
+ISP will then relay that message to something called a DNS server,
+43
+
+44
+00:02:32,130 --> 00:02:34,320
+a domain name system server.
+44
+
+45
+00:02:34,710 --> 00:02:38,100
+And a DNS server is essentially just a souped up phonebook.
+45
+
+46
+00:02:38,580 --> 00:02:43,580
+And what happens when you make that request through your browser is the DNS
+46
+
+47
+00:02:43,620 --> 00:02:48,620
+server will look up in its database as to what is the exact IP address
+47
+
+48
+00:02:49,800 --> 00:02:52,170
+of that website that you are trying to access.
+48
+
+49
+00:02:52,410 --> 00:02:57,410
+And every single computer that's connected to the internet has an IP address.
+49
+
+50
+00:02:57,720 --> 00:03:00,790
+This is like a postal for your computer
+50
+
+51
+00:03:01,000 --> 00:03:04,290
+so that when people need to send and receive files on the internet
+51
+
+52
+00:03:04,410 --> 00:03:08,460
+each computer can be located by their unique IP address.
+52
+
+53
+00:03:08,760 --> 00:03:11,550
+And once the DNS server finds the IP address,
+53
+
+54
+00:03:11,820 --> 00:03:15,720
+it sends that back to your browser. So now, you know
+54
+
+55
+00:03:15,720 --> 00:03:19,620
+the exact address where you can find the Google homepage.
+55
+
+56
+00:03:19,980 --> 00:03:24,980
+The next thing that happens is you will send a direct request to that address
+56
+
+57
+00:03:25,440 --> 00:03:27,180
+through your internet service provider.
+57
+
+58
+00:03:27,270 --> 00:03:32,010
+And this message will be delivered via what's called the internet backbone.
+58
+
+59
+00:03:32,220 --> 00:03:33,600
+Now the internet backbone
+59
+
+60
+00:03:33,630 --> 00:03:36,720
+isn't some sort of analogy for some clever Programming.
+60
+
+61
+00:03:36,990 --> 00:03:39,720
+It's literally the backbone of the internet.
+61
+
+62
+00:03:40,110 --> 00:03:43,170
+And if you head over the submarinecablemap.com,
+62
+
+63
+00:03:43,560 --> 00:03:45,540
+you can view all of the
+63
+
+64
+00:03:45,900 --> 00:03:50,900
+underwater cables that power the internet. And the internet is made up of these
+64
+
+65
+00:03:51,420 --> 00:03:54,120
+huge sprawling masses of wires
+65
+
+66
+00:03:54,210 --> 00:03:58,050
+connecting all of the world's internet users. As you can imagine,
+66
+
+67
+00:03:58,080 --> 00:04:00,540
+it's a pretty complex world out there. Now,
+67
+
+68
+00:04:00,570 --> 00:04:05,570
+if I'm sitting in London and I want to see a website that's hosted in the
+68
+
+69
+00:04:05,940 --> 00:04:06,960
+United States,
+69
+
+70
+00:04:07,110 --> 00:04:11,160
+then my browser would have to make a request that goes through one of these
+70
+
+71
+00:04:11,160 --> 00:04:15,390
+cables under the Atlantic ocean in order to reach the United States.
+71
+
+72
+00:04:15,540 --> 00:04:18,120
+And once that computer has received my request,
+72
+
+73
+00:04:18,360 --> 00:04:21,420
+they'll send back all of the relevant data, again,
+73
+
+74
+00:04:21,450 --> 00:04:26,400
+through these giant cables. And to navigate all of this crazy underwater and
+74
+
+75
+00:04:26,400 --> 00:04:30,360
+above water wires, all I have is an IP address.
+75
+
+76
+00:04:30,450 --> 00:04:33,690
+It's like as if I'm sending a letter halfway across the world
+76
+
+77
+00:04:34,020 --> 00:04:38,910
+and my only hope for my letter to reach my friend is that postal address on the
+77
+
+78
+00:04:38,910 --> 00:04:39,900
+front of the envelope.
+78
+
+79
+00:04:39,990 --> 00:04:44,160
+So once I've gotten the IP address of the website that I want to access,
+79
+
+80
+00:04:44,520 --> 00:04:49,520
+then my browser sends another message through the internet service provider via
+80
+
+81
+00:04:49,560 --> 00:04:51,240
+the internet backbone to
+81
+
+82
+00:04:51,420 --> 00:04:56,190
+the server that is located at that address 216.58
+82
+
+83
+00:04:56,190 --> 00:04:58,050
+210.46.
+83
+
+84
+00:04:58,380 --> 00:05:03,090
+And the computer that's located at that address is of course the Google server.
+84
+
+85
+00:05:03,540 --> 00:05:05,030
+And on the server there's
+85
+
+86
+00:05:05,190 --> 00:05:09,270
+all of the files that I would need in order to be able to view the Google
+86
+
+87
+00:05:09,270 --> 00:05:10,103
+homepage.
+87
+
+88
+00:05:10,470 --> 00:05:14,340
+The server then sends all of those files back to me through the internet
+88
+
+89
+00:05:14,340 --> 00:05:17,760
+backbone and I get to see the Google homepage in my browser.
+89
+
+90
+00:05:17,940 --> 00:05:21,750
+And all of that happens in a matter of milliseconds.
+90
+
+91
+00:05:21,900 --> 00:05:26,250
+And just to imagine the journey that my data has gone on traveling through the
+91
+
+92
+00:05:26,250 --> 00:05:28,140
+world thousands of times per day.
+92
+
+93
+00:05:28,380 --> 00:05:32,340
+So why don't you give it a go? Open up your browser and type in 
+93
+
+94
+00:05:32,340 --> 00:05:35,400
+216.58.210.46,
+94
+
+95
+00:05:35,850 --> 00:05:40,850
+and hit enter to see the Google homepage being served up to you through the
+95
+
+96
+00:05:40,920 --> 00:05:41,340
+internet.

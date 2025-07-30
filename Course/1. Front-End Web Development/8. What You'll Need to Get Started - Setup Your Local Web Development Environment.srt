@@ -1,0 +1,444 @@
+0
+1
+00:00:00,690 --> 00:00:01,150
+All right.
+1
+
+2
+00:00:01,170 --> 00:00:03,900
+So, first things first. Before we do anything else,
+2
+
+3
+00:00:03,930 --> 00:00:07,890
+we first have to get set up and ready for web development.
+3
+
+4
+00:00:07,890 --> 00:00:14,010
+So I'm gonna walk you through a couple of applications that we'll be using pretty much full time during
+4
+
+5
+00:00:14,010 --> 00:00:21,300
+this course. There are two major tools that we’ll rely on, and that is going to be the Chrome browser and
+5
+
+6
+00:00:21,300 --> 00:00:23,190
+the Atom text editor.
+6
+
+7
+00:00:23,190 --> 00:00:26,140
+And between these two tools we're going to achieve a lot.
+7
+
+8
+00:00:26,190 --> 00:00:31,890
+And later on in the course when we're introducing more advanced concepts such as using the command line
+8
+
+9
+00:00:31,890 --> 00:00:36,350
+or using a database then we'll install other things as we go along.
+9
+
+10
+00:00:36,480 --> 00:00:42,120
+But to get started the most important applications we need to install are just these two.
+10
+
+11
+00:00:42,120 --> 00:00:48,150
+Now you might already have Chrome installed, but if you don't then be sure to check out the Web Development
+11
+
+12
+00:00:48,150 --> 00:00:54,930
+Course Resources List which I’ll link to in this current lesson. And it's really really important that
+12
+
+13
+00:00:54,930 --> 00:00:59,460
+you check over here because every single time I mention a link, or every single time I try to point
+13
+
+14
+00:00:59,460 --> 00:01:04,740
+you towards something, the links will show up over here, and you'll be able to click on it to save you
+14
+
+15
+00:01:04,740 --> 00:01:07,940
+all the trouble of having to type it all out.
+15
+
+16
+00:01:08,010 --> 00:01:08,720
+First things first.
+16
+
+17
+00:01:08,730 --> 00:01:14,580
+If you don't have Chrome installed, then open up this page in your browser and just click on this link
+17
+
+18
+00:01:14,640 --> 00:01:21,330
+to go ahead and download and install Chrome. And that should be pretty simple. And it will guide you through
+18
+
+19
+00:01:21,330 --> 00:01:22,540
+the process.
+19
+
+20
+00:01:22,560 --> 00:01:28,050
+So now that you've downloaded the browser you need, the next step is to install a code editor.
+20
+
+21
+00:01:28,200 --> 00:01:36,240
+And out there there are so many different code editors, for example, Atom, VSCode, Sublime, Brackets ...
+21
+
+22
+00:01:36,240 --> 00:01:42,810
+And if you think about it all that you need to actually write code is just some form of text editor.
+22
+
+23
+00:01:42,810 --> 00:01:47,510
+So you could, if you really wanted to, even use something like Notepad.
+23
+
+24
+00:01:47,550 --> 00:01:53,640
+But the downside of Notepad is that it doesn't have all of the great features that some of these other specialized
+24
+
+25
+00:01:53,700 --> 00:01:55,230
+code editors have.
+25
+
+26
+00:01:55,230 --> 00:02:00,660
+So two of my favorite are Atom and VSCode and I use both of them pretty regularly.
+26
+
+27
+00:02:00,720 --> 00:02:06,540
+Now, in the course videos you'll see me use Atom, but if you have a strong preference towards one of these
+27
+
+28
+00:02:06,600 --> 00:02:12,390
+others or any other code editor that you're already used to that you want to use instead then feel free
+28
+
+29
+00:02:12,390 --> 00:02:18,390
+to do that. But if you have no strong preferences then I recommend we go ahead and install the Atom text
+29
+
+30
+00:02:18,390 --> 00:02:19,290
+editor.
+30
+
+31
+00:02:19,290 --> 00:02:22,580
+And it's completely free to download and install.
+31
+
+32
+00:02:22,620 --> 00:02:29,160
+So if you just head over to atom.io or go through the Web Development Course Resources List, then
+32
+
+33
+00:02:29,160 --> 00:02:35,040
+you should land on this page and it very cleverly figures out what system you have that you're running.
+33
+
+34
+00:02:35,040 --> 00:02:40,410
+So for example at the moment I'm running MacOS and I'm on MacOS 10.9 or later.
+34
+
+35
+00:02:40,410 --> 00:02:47,370
+So all you have to do is just go ahead and click Download, and, once download has completed, then you can
+35
+
+36
+00:02:47,370 --> 00:02:55,170
+simply head over to your Downloads folder and double click to unzip that package. And now you will see
+36
+
+37
+00:02:55,200 --> 00:02:56,390
+Atom show up.
+37
+
+38
+00:02:56,400 --> 00:03:03,420
+The last thing you have to do is just to move this application into your Applications folder. On the Mac
+38
+
+39
+00:03:03,420 --> 00:03:08,130
+it’s just a matter of heading over to your Macintosh harddrive and then your Applications folder, and
+39
+
+40
+00:03:08,130 --> 00:03:16,260
+then dragging in that Atom application that you just downloaded in your Downloads over into here. And
+40
+
+41
+00:03:16,350 --> 00:03:20,040
+then you're all done and you're set up with Atom.
+41
+
+42
+00:03:20,040 --> 00:03:25,650
+Now, if you're a Windows user and you head over to atom.io, you'll see that will automatically detect
+42
+
+43
+00:03:25,860 --> 00:03:28,570
+that you are viewing this on a Windows computer.
+43
+
+44
+00:03:28,710 --> 00:03:34,380
+And then you can just go ahead and again click that big yellow Download button. And you should end up
+44
+
+45
+00:03:34,440 --> 00:03:40,620
+with something that's called something like atomsetup.exe, and you'll be able to see this in your
+45
+
+46
+00:03:40,620 --> 00:03:42,550
+Downloads folder.
+46
+
+47
+00:03:42,570 --> 00:03:48,120
+So now if you just double click on that and it will automatically do everything it needs to install
+47
+
+48
+00:03:48,150 --> 00:03:50,310
+Atom on your system.
+48
+
+49
+00:03:50,370 --> 00:03:56,880
+So once you're done it should open up a new Atom window like so, and you would have successfully installed
+49
+
+50
+00:03:56,970 --> 00:04:01,900
+Atom. And the power of Atom really comes from their packages.
+50
+
+51
+00:04:01,900 --> 00:04:08,110
+So you can see that they have over 8000 packages, which are bunches of code that other programmers have
+51
+
+52
+00:04:08,110 --> 00:04:12,220
+written to make your experience of using Atom better.
+52
+
+53
+00:04:12,340 --> 00:04:19,930
+So you can put in custom things such as display a clock in the Atom status bar, or other things such
+53
+
+54
+00:04:19,930 --> 00:04:25,990
+as having the file icons next to each of your files, or something that's way more practical which is
+54
+
+55
+00:04:25,990 --> 00:04:31,240
+things like atom-beautify which just beautifies and indents your code for you.
+55
+
+56
+00:04:31,240 --> 00:04:33,220
+So these are really really powerful.
+56
+
+57
+00:04:33,250 --> 00:04:35,750
+And we're going to customize it for the course.
+57
+
+58
+00:04:36,010 --> 00:04:41,260
+So, again, if you head back over to the Web Development Course Resources List, you'll see that there is
+58
+
+59
+00:04:41,290 --> 00:04:45,380
+a list of Atom packages that we want you to install.
+59
+
+60
+00:04:45,490 --> 00:04:50,980
+And these are the ones which are recommended and these are the ones which are optional.
+60
+
+61
+00:04:50,980 --> 00:04:56,830
+All you have to do is open up Atom and go to Preferences and then go to Install.
+61
+
+62
+00:04:56,920 --> 00:05:02,580
+And I want you to search for each of these and then just go ahead and install it.
+62
+
+63
+00:05:02,710 --> 00:05:08,290
+So you can simply just copy and paste it into here and you'll see the one that should match up exactly
+63
+
+64
+00:05:08,290 --> 00:05:10,310
+with the name that you see over here.
+64
+
+65
+00:05:10,330 --> 00:05:17,110
+And then just go ahead and click Install. And on Windows it is absolutely exactly the same.
+65
+
+66
+00:05:17,110 --> 00:05:22,570
+And once you have installed all of your packages then you should be able to view them over here.
+66
+
+67
+00:05:22,570 --> 00:05:28,390
+Now if you end up having any issues installing packages in Atom, then I recommend to go back to that
+67
+
+68
+00:05:28,390 --> 00:05:34,660
+Google doc and scroll down to the place where I've got the troubleshooting instructions and follow each
+68
+
+69
+00:05:34,660 --> 00:05:37,690
+of these steps to see if you can try and resolve it.
+69
+
+70
+00:05:37,750 --> 00:05:45,290
+Now if you really can't fix it and your specific version of Windows or Mac or Linux just won't install
+70
+
+71
+00:05:45,310 --> 00:05:50,710
+Atom or won't install the packages then I recommend to go ahead and get VSCode instead.
+71
+
+72
+00:05:51,070 --> 00:05:56,590
+So, head over to the link. So, you'll be able to find a link to VSCode again in the Course Resources 
+72
+
+73
+00:05:56,590 --> 00:05:57,150
+List.
+73
+
+74
+00:05:57,310 --> 00:06:02,230
+And once you click on it it will take you to a web site which will automatically look at which system
+74
+
+75
+00:06:02,230 --> 00:06:05,050
+you're running and give you a big Download button.
+75
+
+76
+00:06:05,050 --> 00:06:09,700
+And then from there on it's exactly the same as downloading and installing Atom.
+76
+
+77
+00:06:09,760 --> 00:06:15,040
+Now you can also click on the dropdown list to select the stable version of whichever system you're
+77
+
+78
+00:06:15,040 --> 00:06:15,730
+running.
+78
+
+79
+00:06:15,760 --> 00:06:19,690
+I recommend you don't go for the insiders version because it usually has more bugs.
+79
+
+80
+00:06:19,690 --> 00:06:22,390
+I recommend going for the stable version instead.
+80
+
+81
+00:06:22,390 --> 00:06:28,920
+Now similar to the packages and Atom I've also compiled a list of the equivalent extensions in 
+81
+
+82
+00:06:28,930 --> 00:06:30,160
+VSCode that you can install.
+82
+
+83
+00:06:30,550 --> 00:06:36,440
+So head over to the Course Resources List and you'll be have to find this list of VSCode extensions
+83
+
+84
+00:06:36,500 --> 00:06:37,270
+I recommend.
+84
+
+85
+00:06:37,570 --> 00:06:44,230
+But the goal is to have the Chrome browser installed and some form of text editor be it VSCode or
+85
+
+86
+00:06:44,320 --> 00:06:45,840
+Atom installed.
+86
+
+87
+00:06:46,000 --> 00:06:51,190
+Once you've got an editor and the Chrome browser, then you're ready to head over to the next lesson where
+87
+
+88
+00:06:51,190 --> 00:06:56,320
+we're going to get started actually learning how to code and start building our web site.
+88
+
+89
+00:06:56,350 --> 00:06:59,260
+So for all of that and more I'll see you on the next lesson.
