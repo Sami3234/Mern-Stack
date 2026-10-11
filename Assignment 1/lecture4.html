@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lecture 4: Introduction to CSS - Syntax, Inclusion Methods, and Styling Fundamentals">
+  <title>Lecture 4: Introduction to CSS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="sample-card">
+    <div class="lecture-content-body">
+
+      <h1 class="lecture-main-title">Lecture 4: Introduction to CSS</h1>
+      <p class="lecture-subtitle-italic">Styling web documents, syntax rules, inclusion methods, and color systems</p>
+      
+      <hr class="horizontal-rule">
+
+      <h2 class="content-heading heading-underline">Summary</h2>
+      <p class="content-paragraph">
+        This lecture introduces Cascading Style Sheets (CSS), isolating visual presentation from structural HTML. It explains CSS syntax (selectors, properties, values), the three inclusion methods (inline, internal, external), and foundational font and color properties.
+      </p>
+
+      <h2 class="content-heading">Topics Covered:</h2>
+      <ul class="topics-tree">
+        <li>Introduction to CSS
+          <ul>
+            <li>CSS Fundamentals
+              <ul>
+                <li>Separation of presentation from content</li>
+                <li>CSS rule syntax: selector { property: value; }</li>
+                <li>Declaration blocks and property values</li>
+              </ul>
+            </li>
+            <li>Inclusion Methods
+              <ul>
+                <li>Inline styles using style attribute</li>
+                <li>Internal styling within style element</li>
+                <li>External stylesheets via link tag</li>
+              </ul>
+            </li>
+            <li>Colors &amp; Typography
+              <ul>
+                <li>Color names, HEX, RGB, and HSL formats</li>
+                <li>Font families, font sizes, and font weights</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <p class="code-section-label">Example Code:</p>
+      <pre class="code-box-display">&lt;style>
+  .styled-box {
+    background-color: #e0f2fe;
+    color: #0369a1;
+    border: 1px solid #7dd3fc;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+&lt;/style>
+&lt;div class="styled-box">This element is styled using CSS!&lt;/div></pre>
+
+      <p class="output-section-label">Output:</p>
+      <div class="output-rendered-box">
+        <div style="background-color: #e0f2fe; color: #0369a1; border: 1px solid #7dd3fc; padding: 10px; border-radius: 4px; font-weight: bold; font-size: 13.5px;">
+          This element is styled using CSS!
+        </div>
+      </div>
+
+      <hr class="horizontal-rule">
+
+      <footer class="card-nav-footer" style="padding-top: 4px; padding-bottom: 8px;">
+        <a href="index.html">Home</a>
+        <span class="nav-separator">|</span>
+        <a href="lecture3.html">Previous Lecture</a>
+        <span class="nav-separator">|</span>
+        <a href="lecture5.html">Next Lecture</a>
+      </footer>
+
+    </div>
+  </main>
+</body>
+</html>

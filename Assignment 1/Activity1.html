@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 1 - Responsive Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #dbe4ef;
+            color: #1f2937;
+            line-height: 1.6;
+            padding: 30px 15px 50px 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .activity-card {
+            width: 100%;
+            max-width: 900px;
+            background-color: #ffffff;
+            border: 1px solid #b8c8d8;
+            border-radius: 6px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+            overflow: hidden;
+        }
+
+        .activity-header {
+            background-color: #2458a6;
+            color: #ffffff;
+            padding: 24px 20px 18px 20px;
+            text-align: center;
+        }
+
+        .activity-header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+
+        .activity-header p {
+            font-size: 13.5px;
+            opacity: 0.9;
+        }
+
+        .activity-body {
+            padding: 24px;
+        }
+
+        .section-title {
+            font-size: 17px;
+            font-weight: 600;
+            color: #2458a6;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 6px;
+            margin-bottom: 14px;
+        }
+
+        .activity-desc {
+            font-size: 14px;
+            color: #475569;
+            margin-bottom: 18px;
+        }
+
+        .image-preview-wrapper {
+            background-color: #f8fafc;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            padding: 12px;
+            text-align: center;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .activity-image {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #94a3b8;
+            border-radius: 4px;
+            display: block;
+            margin: 0 auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .image-caption {
+            margin-top: 10px;
+            font-size: 12.5px;
+            color: #64748b;
+            font-style: italic;
+        }
+
+        .card-footer {
+            border-top: 1px solid #e2e8f0;
+            padding: 14px 20px;
+            text-align: center;
+            background-color: #f8fafc;
+        }
+
+        .card-footer a {
+            color: #2458a6;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 13.5px;
+        }
+
+        .card-footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="activity-card">
+
+        <header class="activity-header">
+            <h1>Lab Activity 1: Responsive Form</h1>
+            <p>Muhammad Sami Ullah | FA24-BSE-080 | COMSATS University Islamabad</p>
+        </header>
+
+        <div class="activity-body">
+            <h2 class="section-title">Activity Output Preview</h2>
+            <p class="activity-desc">
+                This activity demonstrates a responsive form layout created using HTML, internal CSS, and media queries.
+            </p>
+
+            <div class="image-preview-wrapper">
+                <img src="images/Lab5-A1.png" alt="Lab 5 Activity 1 Screenshot" class="activity-image">
+            </div>
+        </div>
+
+        <footer class="card-footer">
+            <a href="index.html">Home</a>
+            <span style="color: #94a3b8; margin: 0 8px;">|</span>
+            <a href="lecture8.html">Previous Lecture</a>
+            <span style="color: #94a3b8; margin: 0 8px;">|</span>
+            <a href="Activity2.html">Next: Activity 2</a>
+        </footer>
+
+    </main>
+
+</body>
+
+</html> 

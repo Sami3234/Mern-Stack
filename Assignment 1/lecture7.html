@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lecture 7: Responsive Web Design - Viewport Meta Tag, Fluid Units, and Media Queries">
+  <title>Lecture 7: Responsive Web Design</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .responsive-live-box {
+      padding: 12px;
+      background-color: #e0f2fe;
+      color: #0369a1;
+      border: 1px solid #7dd3fc;
+      border-radius: 4px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 13.5px;
+    }
+    @media (max-width: 600px) {
+      .responsive-live-box {
+        background-color: #fef3c7;
+        color: #92400e;
+        border-color: #fcd34d;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="sample-card">
+    <div class="lecture-content-body">
+
+      <h1 class="lecture-main-title">Lecture 7: Responsive Web Design</h1>
+      <p class="lecture-subtitle-italic">Mobile-first development, viewport meta tag, and media queries</p>
+      
+      <hr class="horizontal-rule">
+
+      <h2 class="content-heading heading-underline">Summary</h2>
+      <p class="content-paragraph">
+        This lecture details techniques for building responsive web designs that adapt seamlessly across devices, focusing on the viewport meta tag, relative CSS units (rem, em, %, vw), fluid layouts, and CSS media queries (@media).
+      </p>
+
+      <h2 class="content-heading">Topics Covered:</h2>
+      <ul class="topics-tree">
+        <li>Responsive Web Design
+          <ul>
+            <li>Viewport Meta Tag
+              <ul>
+                <li>Configuring width=device-width and initial-scale=1.0</li>
+                <li>Device pixel ratio and mobile viewport scaling</li>
+              </ul>
+            </li>
+            <li>Fluid Measurement Units
+              <ul>
+                <li>Relative units: rem, em, percentages (%), vw, vh</li>
+                <li>Responsive images using max-width: 100% and auto height</li>
+              </ul>
+            </li>
+            <li>CSS Media Queries
+              <ul>
+                <li>Syntax: @media screen and (max-width: 768px)</li>
+                <li>Mobile-first breakpoints for phones, tablets, and desktops</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <p class="code-section-label">Example Code:</p>
+      <pre class="code-box-display">&lt;style>
+  .responsive-banner {
+    padding: 12px;
+    background-color: #e0f2fe;
+    color: #0369a1;
+    text-align: center;
+  }
+  @media (max-width: 600px) {
+    .responsive-banner {
+      background-color: #fef3c7;
+      color: #92400e;
+    }
+  }
+&lt;/style>
+&lt;div class="responsive-banner">Fluid Responsive Container&lt;/div></pre>
+
+      <p class="output-section-label">Output:</p>
+      <div class="output-rendered-box">
+        <div class="responsive-live-box">
+          Fluid Responsive Container (Adapts dynamically to viewport)
+        </div>
+      </div>
+
+      <hr class="horizontal-rule">
+
+      <footer class="card-nav-footer" style="padding-top: 4px; padding-bottom: 8px;">
+        <a href="index.html">Home</a>
+        <span class="nav-separator">|</span>
+        <a href="lecture6.html">Previous Lecture</a>
+        <span class="nav-separator">|</span>
+        <a href="lecture8.html">Next Lecture</a>
+      </footer>
+
+    </div>
+  </main>
+</body>
+</html>
