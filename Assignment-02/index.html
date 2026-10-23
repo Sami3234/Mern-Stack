@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CSC336 Web Technologies Interactive Quiz Application - Muhammad Sami Ullah (FA24-BSE-080)">
+    <meta name="author" content="Muhammad Sami Ullah">
+    <title>Interactive Quiz Application | CSC336 Web Technologies</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <!-- Background Ambient Glows -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+
+    <!-- Header / Navbar -->
+    <header class="quiz-header">
+        <div class="header-content">
+            <div class="brand-group">
+                <div class="logo-box">
+                    <img src="image1.jpeg" alt="COMSATS Logo" class="uni-logo" onerror="this.style.display='none'">
+                    <i class="bi bi-mortarboard-fill logo-fallback"></i>
+                </div>
+                <div class="brand-text">
+                    <h1 class="brand-title">CSC336 Web Technologies</h1>
+                    <p class="brand-subtitle">Assignment 2 &bull; Interactive Quiz Application</p>
+                </div>
+            </div>
+
+            <div class="header-right">
+                <div class="student-pill">
+                    <i class="bi bi-person-badge"></i>
+                    <div class="student-info">
+                        <span class="student-name">Muhammad Sami Ullah</span>
+                        <span class="student-reg">FA24-BSE-080</span>
+                    </div>
+                </div>
+
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark and Light Mode" title="Toggle Light/Dark Theme">
+                    <span class="toggle-icon-wrap">
+                        <i class="bi bi-brightness-high-fill sun-icon"></i>
+                        <i class="bi bi-moon-stars-fill moon-icon"></i>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="quiz-main">
+        <div class="quiz-wrapper">
+            
+            <!-- Multi-colored Segmented Progress Bar -->
+            <div class="segmented-progress-container" aria-label="Quiz Progress">
+                <div class="segmented-bar" id="segmented-bar">
+                    <div class="progress-segment segment-1" data-index="0" title="Question 1">
+                        <div class="segment-fill"></div>
+                    </div>
+                    <div class="progress-segment segment-2" data-index="1" title="Question 2">
+                        <div class="segment-fill"></div>
+                    </div>
+                    <div class="progress-segment segment-3" data-index="2" title="Question 3">
+                        <div class="segment-fill"></div>
+                    </div>
+                    <div class="progress-segment segment-4" data-index="3" title="Question 4">
+                        <div class="segment-fill"></div>
+                    </div>
+                    <div class="progress-segment segment-5" data-index="4" title="Question 5">
+                        <div class="segment-fill"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Welcome / Start Screen -->
+            <section id="start-screen" class="quiz-card welcome-card">
+                <div class="card-inner">
+                    <div class="welcome-badge">
+                        <i class="bi bi-stars"></i> COMSATS University Islamabad &bull; Vehari Campus
+                    </div>
+                    <h2 class="welcome-heading">Web Technologies Knowledge Challenge</h2>
+                    <p class="welcome-desc">
+                        Test your mastery of HTML5, CSS3, JavaScript (ES6+), and modern web concepts.
+                        Answer 5 randomized multiple-choice questions with real-time feedback and dynamic countdown timers.
+                    </p>
+
+                    <div class="rules-grid">
+                        <div class="rule-item">
+                            <div class="rule-icon"><i class="bi bi-stopwatch-fill"></i></div>
+                            <div class="rule-info">
+                                <h4>15 Seconds / Question</h4>
+                                <p>Beat the countdown clock before it runs out.</p>
+                            </div>
+                        </div>
+                        <div class="rule-item">
+                            <div class="rule-icon"><i class="bi bi-bar-chart-steps"></i></div>
+                            <div class="rule-info">
+                                <h4>Segmented Multi-Bar</h4>
+                                <p>Track your sequential progress through vibrant milestones.</p>
+                            </div>
+                        </div>
+                        <div class="rule-item">
+                            <div class="rule-icon"><i class="bi bi-check-all"></i></div>
+                            <div class="rule-info">
+                                <h4>Dynamic Highlighting</h4>
+                                <p>Instant visual cues for correct and incorrect answers.</p>
+                            </div>
+                        </div>
+                        <div class="rule-item">
+                            <div class="rule-icon"><i class="bi bi-file-earmark-pdf-fill"></i></div>
+                            <div class="rule-info">
+                                <h4>Official PDF Report</h4>
+                                <p>Export and download your full result card as a verified PDF.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="candidate-bar">
+                        <span class="cand-label">Candidate:</span>
+                        <strong class="cand-val">Muhammad Sami Ullah</strong>
+                        <span class="cand-divider">|</span>
+                        <span class="cand-label">Registration No:</span>
+                        <strong class="cand-val">FA24-BSE-080</strong>
+                    </div>
+
+                    <button id="start-btn" class="action-btn primary-btn btn-lg">
+                        <span>Start Quiz Now</span>
+                        <i class="bi bi-arrow-right-circle-fill"></i>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Active Quiz Question Screen -->
+            <section id="question-screen" class="quiz-card question-card hidden">
+                <div class="card-inner">
+                    <!-- Question Header (Counter & Timer) -->
+                    <div class="card-top-bar">
+                        <div class="question-tracker">
+                            <span class="q-label">Question</span>
+                            <span class="q-current" id="current-question-num">1</span>
+                            <span class="q-slash">/</span>
+                            <span class="q-total" id="total-questions-num">5</span>
+                        </div>
+
+                        <div class="timer-badge" id="timer-badge">
+                            <i class="bi bi-clock-history timer-icon"></i>
+                            <span class="timer-text">Time Left: <strong id="time-left">15</strong>s</span>
+                        </div>
+                    </div>
+
+                    <!-- Question Text -->
+                    <div class="question-box">
+                        <h2 class="question-title" id="question-text">Loading question...</h2>
+                    </div>
+
+                    <!-- Options Container -->
+                    <div class="options-grid" id="options-container" role="radiogroup" aria-label="Answer Options">
+                        <!-- Options injected by JavaScript -->
+                    </div>
+
+                    <!-- Feedback Alert (Shown upon answering / timeout) -->
+                    <div id="feedback-alert" class="feedback-banner hidden" aria-live="polite">
+                        <i class="feedback-icon bi" id="feedback-icon"></i>
+                        <span class="feedback-message" id="feedback-message"></span>
+                    </div>
+
+                    <!-- Question Footer / Next Button -->
+                    <div class="card-bottom-bar">
+                        <div class="status-summary" id="q-status-hint">
+                            <i class="bi bi-info-circle"></i> Select an option to proceed
+                        </div>
+                        <button id="next-btn" class="action-btn next-btn" disabled>
+                            <span id="next-btn-text">Next</span>
+                            <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results Screen -->
+            <section id="result-screen" class="quiz-card result-card hidden">
+                <div class="card-inner">
+                    <div class="result-header">
+                        <div class="trophy-badge" id="result-badge-icon">
+                            <i class="bi bi-trophy-fill"></i>
+                        </div>
+                        <h2 class="result-title">Quiz Completed!</h2>
+                        <p class="result-subtitle" id="result-feedback-text">Here is your comprehensive performance summary.</p>
+                    </div>
+
+                    <!-- Score Showcase -->
+                    <div class="score-display-card">
+                        <div class="score-circle">
+                            <div class="score-number" id="final-score">0 / 5</div>
+                            <div class="score-percentage" id="final-percentage">0%</div>
+                        </div>
+
+                        <div class="candidate-meta">
+                            <div class="meta-row">
+                                <span class="meta-label">Student Name:</span>
+                                <span class="meta-value">Muhammad Sami Ullah</span>
+                            </div>
+                            <div class="meta-row">
+                                <span class="meta-label">Registration No:</span>
+                                <span class="meta-value">FA24-BSE-080</span>
+                            </div>
+                            <div class="meta-row">
+                                <span class="meta-label">Course:</span>
+                                <span class="meta-value">CSC336 Web Technologies (BSSE)</span>
+                            </div>
+                            <div class="meta-row">
+                                <span class="meta-label">Campus / Term:</span>
+                                <span class="meta-value">Vehari Campus &bull; Fall-2026</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Result Breakdown Table (Matches Image 3) -->
+                    <div class="table-responsive-container">
+                        <h3 class="table-title"><i class="bi bi-list-check"></i> Detailed Answer Sheet</h3>
+                        <table class="result-table" id="result-table">
+                            <thead>
+                                <tr>
+                                    <th class="col-num">#</th>
+                                    <th class="col-q">Question</th>
+                                    <th class="col-user">Your Answer</th>
+                                    <th class="col-correct">Correct Answer</th>
+                                    <th class="col-status">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="result-table-body">
+                                <!-- Results generated dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Actions Bar -->
+                    <div class="result-actions">
+                        <button id="download-pdf-btn" class="action-btn pdf-btn btn-lg">
+                            <i class="bi bi-file-earmark-pdf-fill"></i>
+                            <span>Download Results as PDF</span>
+                        </button>
+                        <button id="restart-btn" class="action-btn restart-btn btn-lg">
+                            <i class="bi bi-arrow-counterclockwise"></i>
+                            <span>Retake Quiz</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="quiz-footer">
+        <p>&copy; 2026 COMSATS University Islamabad, Vehari Campus &bull; Department of Computer Science</p>
+        <p class="footer-credit">Developed by <strong>Muhammad Sami Ullah</strong> (FA24-BSE-080)</p>
+    </footer>
+
+    <!-- Libraries: jsPDF & jsPDF AutoTable & Confetti -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+    <!-- Main Logic -->
+    <script src="script.js"></script>
+</body>
+</html>
